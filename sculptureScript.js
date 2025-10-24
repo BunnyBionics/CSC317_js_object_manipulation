@@ -1,3 +1,4 @@
+'use strict';
 
 const sculptureList = require('./data.js'); // import data.js
 
@@ -10,3 +11,13 @@ const sculptureList = require('./data.js'); // import data.js
 //     console.log(`${key}: ${element[key].length}`)
 // }
 
+let sculptureListLengths = Object.assign([], sculptureList)
+for (let sculpture of sculptureListLengths) {
+    for (let key of Object.keys(sculpture)) {
+        sculpture[key] = sculpture[key].length
+    }
+}
+
+for (let sculpture of sculptureListLengths){
+    console.log(sculpture)
+}
